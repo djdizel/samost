@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 
 namespace samost
 {
@@ -35,10 +36,21 @@ namespace samost
                 {
                     case 1:
                         Console.WriteLine("Список продуктов:");
+                        Console.WriteLine(new string('-', 85));
+                        Console.WriteLine("|{0,-20}|{1,-12}|{2,-15}|{3,-8}|{4,-20}|",
+                            "Название", "Цена", "Производитель", "Кол-во", "Дата выпуска");
+                        Console.WriteLine(new string('-', 85));
+
                         foreach (var item in merchandiseNames)
                         {
-                            Console.WriteLine(item);
+                            Console.WriteLine("|{0,-20}|{1,-12:C2}|{2,-15}|{3,-8}|{4,-20:d}|",
+                                item.Name,
+                                item.Price,
+                                item.Producer,
+                                item.Count,
+                                item.Year);
                         }
+                        Console.WriteLine(new string('-', 85));
                         break;
                     case 2:
                         Console.Write("Введите название продукта: ");
