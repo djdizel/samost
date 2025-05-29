@@ -5,10 +5,8 @@ namespace samost
 {
     internal class Program
     {
-        // Define the Student class
         static void Main(string[] args)
         {
-            // Initialize the list of students
             List<Student> students = new List<Student>
             {
                 new Student { Name = "Иванов Иван Иванович", Group = "Группа 1", Inf = 5, Physics = 4, History = 3 },
